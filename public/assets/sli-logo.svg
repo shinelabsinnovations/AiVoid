@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1040" viewBox="574 312 900 520" fill="none">
+<title>Shine Labs Innovations</title>
+<defs><linearGradient id="logo-gradient" gradientUnits="userSpaceOnUse" x1="215.51724137931035" y1="86.20689655172414" x2="1336.2068965517242" y2="534.4827586206897" gradientTransform="matrix(0.7478849407783418 0 0 0.7537993920972644 488.51438240270727 270.4802431610942)"><stop offset="0" stop-color="#4c54b0"/><stop offset="0.08307692307692308" stop-color="#5d59b0"/><stop offset="0.21846153846153846" stop-color="#7561af"/><stop offset="0.35307692307692307" stop-color="#9068a9"/><stop offset="0.5538461538461539" stop-color="#c46d8f"/><stop offset="0.6092307692307692" stop-color="#d26f88"/><stop offset="0.6492307692307693" stop-color="#d97484"/><stop offset="0.7692307692307693" stop-color="#e38b81"/><stop offset="0.9215384615384615" stop-color="#efad7b"/><stop offset="1" stop-color="#f5bf76"/></linearGradient></defs>
+<g stroke="url(#logo-gradient)" stroke-linecap="round" stroke-linejoin="round">
+  <g stroke-width="26">
+    <path d="M889 337 H738 C659.02 337 595 401.02 595 480 C595 558.98 659.02 623 738 623 H795 A42 42 0 0 1 795 707 H644 A50 50 0 0 0 644 807 H797 C877.08 807 942 742.08 942 662 C942 584.13 878.87 521 801 521 H742 A42 42 0 0 1 742 437 H880 A52 52 0 0 0 932 385 A48 48 0 0 1 980 337 H1050 A48 48 0 0 1 1098 385 V707 H1249 A50 50 0 0 1 1299 757"/>
+    <path d="M998 385 V707 A100 100 0 0 0 1098 807 H1307 A50 50 0 0 0 1357 757 V485 C1357 439 1405 441 1405 385"/>
+    <path d="M1357 397 V385 A48 48 0 0 1 1453 385 V757 A50 50 0 0 1 1403 807 H1397"/>
+  </g>
+  <g stroke-width="14">
+    <path d="M881 386 H741 A93 93 0 0 0 741 572 H766"/>
+    <path d="M808 572 C839 576 867 595 881 625"/>
+    <path d="M645 757 H799 A92 92 0 0 0 891 665"/>
+    <path d="M1048 387 V494"/>
+    <path d="M1048 547 V707 A50 50 0 0 0 1098 757 H1248"/>
+    <path d="M1405 479 V757"/>
+  </g>
+</g>
+<g fill="url(#logo-gradient)">
+  <circle cx="881" cy="386" r="15"/>
+  <circle cx="766" cy="572" r="15"/>
+  <circle cx="645" cy="757" r="15"/>
+  <circle cx="891" cy="665" r="15"/>
+  <circle cx="1048" cy="387" r="15"/>
+  <circle cx="1048" cy="494" r="15"/>
+  <circle cx="1048" cy="547" r="15"/>
+  <circle cx="1248" cy="757" r="15"/>
+  <circle cx="1405" cy="479" r="15"/>
+  <circle cx="1405" cy="757" r="15"/>
+</g>
+</svg>

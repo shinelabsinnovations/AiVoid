@@ -1,0 +1,8 @@
+node_modules/
+aivoid-private/
+.dev-data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.DS_Store
+Thumbs.db

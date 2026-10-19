@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file:; img-src 'self' file: blob: data:; connect-src 'self'; form-action 'none'; base-uri 'none'; manifest-src 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <title>AiVoid: Remove AI Metadata and C2PA from Images</title>
+  <meta name="description" content="Free tool that strips AI tags, C2PA Content Credentials, prompts, GPS and EXIF metadata from JPEG, PNG, WebP and HEIC images. Runs in your browser, no uploads.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Shine Labs Innovations">
+  <link rel="canonical" href="https://aivoid.shinelabsinnovations.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AiVoid">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://aivoid.shinelabsinnovations.com/">
+  <meta property="og:title" content="AiVoid: Remove AI Metadata and C2PA from Images">
+  <meta property="og:description" content="Free tool that strips AI tags, C2PA Content Credentials, prompts, GPS and EXIF metadata from JPEG, PNG, WebP and HEIC images. Runs in your browser, no uploads.">
+  <meta property="og:image" content="https://aivoid.shinelabsinnovations.com/assets/og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AiVoid: strip the AI tags from your images, free and in your browser">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AiVoid: Remove AI Metadata and C2PA from Images">
+  <meta name="twitter:description" content="Free tool that strips AI tags, C2PA Content Credentials, prompts, GPS and EXIF metadata from JPEG, PNG, WebP and HEIC images. Runs in your browser, no uploads.">
+  <meta name="twitter:image" content="https://aivoid.shinelabsinnovations.com/assets/og.jpg">
+  <meta name="twitter:image:alt" content="AiVoid: strip the AI tags from your images, free and in your browser">
+
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/theme.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://aivoid.shinelabsinnovations.com/#app",
+        "name": "AiVoid",
+        "url": "https://aivoid.shinelabsinnovations.com/",
+        "description": "Free browser tool that removes AI tags, C2PA Content Credentials, generation prompts, GPS and other EXIF/XMP metadata from JPEG, PNG, WebP, GIF, HEIC and AVIF images without uploading them.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "image": "https://aivoid.shinelabsinnovations.com/assets/og.jpg",
+        "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+        "codeRepository": "https://github.com/shinelabsinnovations/AiVoid",
+        "featureList": [
+          "Remove C2PA Content Credentials",
+          "Remove AI generation prompts and settings",
+          "Remove EXIF, XMP, IPTC and GPS metadata",
+          "Batch and folder processing",
+          "Runs entirely in the browser"
+        ],
+        "creator": { "@id": "https://www.shinelabsinnovations.com/#organization" },
+        "publisher": { "@id": "https://www.shinelabsinnovations.com/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.shinelabsinnovations.com/#organization",
+        "name": "Shine Labs Innovations",
+        "url": "https://www.shinelabsinnovations.com/",
+        "logo": "https://aivoid.shinelabsinnovations.com/assets/sli-logo.svg"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="./" aria-label="AiVoid home">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.25" class="mk-ring"/><circle cx="12" cy="12" r="6.5" class="mk-core"/></svg>
+        <span>AiVoid</span>
+      </a>
+      <nav class="nav-links" aria-label="Pages">
+        <a href="./" aria-current="page">Clean</a>
+        <a href="metrics">Metrics</a>
+        <a class="nav-icon" href="https://github.com/shinelabsinnovations/AiVoid" target="_blank" rel="noopener" aria-label="Source code on GitHub" title="Source code on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.25a9.75 9.75 0 0 0-3.08 19c.49.09.67-.21.67-.47v-1.66c-2.72.59-3.29-1.31-3.29-1.31-.45-1.13-1.09-1.43-1.09-1.43-.89-.61.07-.6.07-.6.98.07 1.5 1.01 1.5 1.01.87 1.5 2.29 1.07 2.85.82.09-.63.34-1.07.62-1.31-2.17-.25-4.46-1.09-4.46-4.83 0-1.07.38-1.94 1.01-2.62-.1-.25-.44-1.24.1-2.59 0 0 .82-.26 2.68 1a9.3 9.3 0 0 1 4.88 0c1.86-1.26 2.68-1 2.68-1 .54 1.35.2 2.34.1 2.59.63.68 1.01 1.55 1.01 2.62 0 3.75-2.29 4.58-4.47 4.82.35.3.66.9.66 1.81v2.69c0 .26.18.57.68.47A9.75 9.75 0 0 0 12 2.25z"/></svg>
+        </a>
+      </nav>
+      <div class="theme" role="radiogroup" aria-label="Appearance">
+        <button type="button" role="radio" data-theme-choice="system" aria-checked="true" title="Match system">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="6.75"/><path d="M10 3.25a6.75 6.75 0 0 1 0 13.5z" class="fill"/></svg>
+          <span class="sr-only">Match system</span>
+        </button>
+        <button type="button" role="radio" data-theme-choice="light" aria-checked="false" title="Light">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.5"/><path d="M10 2.5v1.75M10 15.75v1.75M2.5 10h1.75M15.75 10h1.75M4.7 4.7l1.24 1.24M14.06 14.06l1.24 1.24M4.7 15.3l1.24-1.24M14.06 5.94l1.24-1.24"/></svg>
+          <span class="sr-only">Light</span>
+        </button>
+        <button type="button" role="radio" data-theme-choice="dark" aria-checked="false" title="Dark">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.9 12.6A6.75 6.75 0 0 1 7.4 4.1a6.75 6.75 0 1 0 8.5 8.5z"/></svg>
+          <span class="sr-only">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <noscript><p class="noscript">AiVoid needs JavaScript to read and clean images in your browser.</p></noscript>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <h1>Strip the AI tags from your images.</h1>
+      <p class="lede">Drop a photo, a batch or a whole folder. AiVoid lists the Content Credentials, prompts, generator tags, location and other metadata inside each file, then saves clean copies. It all runs in your browser, so your images are never uploaded.</p>
+    </section>
+
+    <section class="drop" id="drop" aria-labelledby="drop-title">
+      <div class="horizon" aria-hidden="true">
+        <span class="ring r3"></span>
+        <span class="ring r2"></span>
+        <span class="ring r1"></span>
+        <span class="core"></span>
+      </div>
+      <div class="drop-copy">
+        <h2 class="drop-title" id="drop-title">Drop images or a folder</h2>
+        <p class="drop-sub">JPEG, PNG, WebP, GIF, HEIC and AVIF</p>
+      </div>
+      <div class="drop-actions">
+        <button type="button" class="btn btn-primary" id="pick-files">Choose images</button>
+        <button type="button" class="btn btn-secondary" id="pick-folder">Choose folder</button>
+      </div>
+      <input type="file" id="file-input" multiple accept="image/*,.jpg,.jpeg,.png,.webp,.gif,.heic,.heif,.avif,.bmp" hidden>
+      <input type="file" id="folder-input" multiple hidden webkitdirectory>
+    </section>
+
+    <section class="workspace" id="workspace" hidden>
+      <div class="overview">
+        <h2 id="ov-title">0 images</h2>
+        <p id="ov-sub"></p>
+      </div>
+
+      <section class="panel" id="kinds-panel" aria-labelledby="kinds-title">
+        <div class="panel-head">
+          <div>
+            <h3 id="kinds-title">Remove from all images</h3>
+            <p class="panel-sub">Everything is selected. Untick what you want to keep, here for every image or per image below.</p>
+          </div>
+        </div>
+        <ul class="kind-list" id="kind-list"></ul>
+      </section>
+
+      <section class="panel" aria-labelledby="files-title">
+        <div class="panel-head">
+          <h3 id="files-title">Images</h3>
+          <button type="button" class="link-btn" id="clear-all">Clear all</button>
+        </div>
+        <ul class="file-list" id="file-list"></ul>
+      </section>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-title">
+      <h2 id="notes-title">Good to know</h2>
+      <div class="notes-grid">
+        <div class="reveal">
+          <h3>Never uploaded</h3>
+          <p>Images are read and cleaned inside your browser.</p>
+        </div>
+        <div class="reveal">
+          <h3>No quality loss</h3>
+          <p>Metadata is cut out. Pixels aren’t re-compressed.</p>
+        </div>
+        <div class="reveal">
+          <h3>Pixel watermarks stay</h3>
+          <p>Marks like SynthID live in the image itself. No metadata tool removes them.</p>
+        </div>
+        <div class="reveal">
+          <h3>Anonymous counts</h3>
+          <p>Only visits and files cleaned are counted. Do Not Track is respected.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <a class="sli" href="https://www.shinelabsinnovations.com/?utm_source=aivoid&amp;utm_medium=referral&amp;utm_campaign=footer" target="_blank" rel="noopener">
+      <img src="assets/sli-logo.svg" alt="" width="44" height="25" loading="lazy">
+      <span>Designed and developed by <strong>Shine Labs Innovations</strong></span>
+    </a>
+    <nav class="foot-links" aria-label="More">
+      <a href="metrics">Metrics</a>
+      <a href="https://github.com/shinelabsinnovations/AiVoid" target="_blank" rel="noopener">Source code</a>
+    </nav>
+    <p class="foot-legal">© 2026 Shine Labs Innovations. Open source under the AGPL-3.0 licence.</p>
+  </footer>
+
+  <div class="actionbar" id="actionbar" hidden>
+    <div class="ab-inner">
+      <p class="ab-text"><strong id="ab-main"></strong> <span id="ab-sub"></span></p>
+      <button type="button" class="btn btn-primary" id="download-all">Download all</button>
+    </div>
+  </div>
+
+  <div class="veil" id="veil" aria-hidden="true">
+    <div class="veil-inner">
+      <div class="horizon big"><span class="ring r3"></span><span class="ring r2"></span><span class="ring r1"></span><span class="core"></span></div>
+      <p>Drop to add</p>
+    </div>
+  </div>
+
+  <div class="sr-only" id="live" aria-live="polite"></div>
+
+  <template id="tpl-file">
+    <li class="file">
+      <div class="file-head">
+        <button type="button" class="file-toggle" aria-expanded="false">
+          <span class="thumb"><span class="thumb-fallback"></span></span>
+          <span class="file-text">
+            <span class="file-name"></span>
+            <span class="file-meta"></span>
+          </span>
+          <span class="tag-ai" hidden>AI</span>
+          <svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 5l5 5-5 5"/></svg>
+        </button>
+        <button type="button" class="icon-btn file-dl">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.5v9M6 9l4 4 4-4M4.5 16.5h11"/></svg>
+        </button>
+      </div>
+      <div class="file-body">
+        <div class="file-body-inner"></div>
+      </div>
+    </li>
+  </template>
+
+  <script src="js/core/util.js"></script>
+  <script src="js/core/exif.js"></script>
+  <script src="js/core/inspect.js"></script>
+  <script src="js/core/formats.js"></script>
+  <script src="js/core/engine.js"></script>
+  <script src="js/track.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/hero.js"></script>
+</body>
+</html>
